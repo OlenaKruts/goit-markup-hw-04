@@ -466,13 +466,20 @@ footer {
 .customers-link {
   fill: var(--icon-customers-primary);
 }
-.customers-item:hover,
-.customers-item:focus {
+.customers-item:hover .customers-link {
   border-color: var(--hover-color);
+  fill: var(--hover-color);
+}
+.customers-item:focus .customers-link {
+  border-color: var(--hover-color);
+  fill: var(--hover-color);
 }
 
-.customers-item:is(:hover, :focus) .customers-link {
-  fill: var(--hover-color);
+.customers-item:hover,
+.customers-item:focus {
+  /* border-color: var(--hover-color);*/
+  /*ИЗМЕНИЛА БОРДЕР ДЛЯ ПРОВЕРКИ ФОКУСА*/
+  border: 10px solid var(--hover-color);
 }
 
 /*==============/CUSTOMERS/=================/
